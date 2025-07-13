@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockScope - Advanced Stock Research Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-chart-line"></i>
+                    <span>StockScope</span>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#dashboard" class="nav-link active">Dashboard</a></li>
+                        <li><a href="#research" class="nav-link">Research</a></li>
+                        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                        <li><a href="#screener" class="nav-link">Screener</a></li>
+                        <li><a href="#news" class="nav-link">News</a></li>
+                        <li><a href="#watchlist" class="nav-link">Watchlist</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Search stocks, ETFs...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <button class="btn btn-primary">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Market Overview -->
+            <section class="market-overview">
+                <h2 class="section-title">Market Overview</h2>
+                <div class="market-cards">
+                    <div class="market-card">
+                        <div class="market-card-header">
+                            <h3>S&P 500</h3>
+                            <span class="market-symbol">^GSPC</span>
+                        </div>
+                        <div class="market-price">4,567.89</div>
+                        <div class="market-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+23.45 (+0.52%)</span>
+                        </div>
+                    </div>
+                    <div class="market-card">
+                        <div class="market-card-header">
+                            <h3>NASDAQ</h3>
+                            <span class="market-symbol">^IXIC</span>
+                        </div>
+                        <div class="market-price">14,234.56</div>
+                        <div class="market-change negative">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>-45.23 (-0.32%)</span>
+                        </div>
+                    </div>
+                    <div class="market-card">
+                        <div class="market-card-header">
+                            <h3>Dow Jones</h3>
+                            <span class="market-symbol">^DJI</span>
+                        </div>
+                        <div class="market-price">35,678.12</div>
+                        <div class="market-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+156.78 (+0.44%)</span>
+                        </div>
+                    </div>
+                    <div class="market-card">
+                        <div class="market-card-header">
+                            <h3>VIX</h3>
+                            <span class="market-symbol">^VIX</span>
+                        </div>
+                        <div class="market-price">18.45</div>
+                        <div class="market-change negative">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>-0.87 (-4.51%)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Content Grid -->
+            <div class="content-grid">
+                <!-- Stock Quote Section -->
+                <section class="stock-quote">
+                    <div class="stock-header">
+                        <div class="stock-info">
+                            <h2 class="stock-symbol">AAPL</h2>
+                            <p class="stock-name">Apple Inc.</p>
+                        </div>
+                        <div class="stock-price-info">
+                            <div class="stock-price">$175.43</div>
+                            <div class="stock-change positive">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>+2.87 (+1.66%)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stock-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Open</span>
+                            <span class="stat-value">$172.56</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">High</span>
+                            <span class="stat-value">$176.12</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Low</span>
+                            <span class="stat-value">$171.89</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Volume</span>
+                            <span class="stat-value">45.2M</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Market Cap</span>
+                            <span class="stat-value">$2.87T</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">P/E Ratio</span>
+                            <span class="stat-value">28.45</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chart Section -->
+                <section class="chart-section">
+                    <div class="chart-header">
+                        <h3>Price Chart</h3>
+                        <div class="chart-controls">
+                            <button class="chart-btn active">1D</button>
+                            <button class="chart-btn">5D</button>
+                            <button class="chart-btn">1M</button>
+                            <button class="chart-btn">3M</button>
+                            <button class="chart-btn">1Y</button>
+                            <button class="chart-btn">5Y</button>
+                        </div>
+                    </div>
+                    <div class="chart-placeholder">
+                        <div class="chart-mock">
+                            <svg viewBox="0 0 800 300" class="chart-svg">
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:0.3" />
+                                        <stop offset="100%" style="stop-color:#4F46E5;stop-opacity:0" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M0,250 L100,240 L200,220 L300,200 L400,180 L500,160 L600,140 L700,120 L800,100" 
+                                      fill="none" stroke="#4F46E5" stroke-width="2"/>
+                                <path d="M0,250 L100,240 L200,220 L300,200 L400,180 L500,160 L600,140 L700,120 L800,100 L800,300 L0,300 Z" 
+                                      fill="url(#gradient)"/>
+                            </svg>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Watchlist -->
+                <section class="watchlist">
+                    <h3 class="section-title">Watchlist</h3>
+                    <div class="watchlist-items">
+                        <div class="watchlist-item">
+                            <div class="watchlist-symbol">TSLA</div>
+                            <div class="watchlist-price">$234.56</div>
+                            <div class="watchlist-change positive">+2.1%</div>
+                        </div>
+                        <div class="watchlist-item">
+                            <div class="watchlist-symbol">MSFT</div>
+                            <div class="watchlist-price">$412.89</div>
+                            <div class="watchlist-change negative">-0.8%</div>
+                        </div>
+                        <div class="watchlist-item">
+                            <div class="watchlist-symbol">GOOGL</div>
+                            <div class="watchlist-price">$2,745.12</div>
+                            <div class="watchlist-change positive">+1.3%</div>
+                        </div>
+                        <div class="watchlist-item">
+                            <div class="watchlist-symbol">NVDA</div>
+                            <div class="watchlist-price">$456.78</div>
+                            <div class="watchlist-change positive">+3.2%</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary">Add to Watchlist</button>
+                </section>
+
+                <!-- News Section -->
+                <section class="news-section">
+                    <h3 class="section-title">Latest News</h3>
+                    <div class="news-items">
+                        <article class="news-item">
+                            <div class="news-content">
+                                <h4>Apple Reports Record Q4 Earnings</h4>
+                                <p>Apple Inc. announced record-breaking quarterly earnings with revenue up 15% year-over-year...</p>
+                                <div class="news-meta">
+                                    <span class="news-source">Reuters</span>
+                                    <span class="news-time">2 hours ago</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="news-item">
+                            <div class="news-content">
+                                <h4>Tesla Announces New Gigafactory</h4>
+                                <p>Tesla reveals plans for a new manufacturing facility in Texas, expected to boost production capacity...</p>
+                                <div class="news-meta">
+                                    <span class="news-source">Bloomberg</span>
+                                    <span class="news-time">4 hours ago</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="news-item">
+                            <div class="news-content">
+                                <h4>Fed Announces Interest Rate Decision</h4>
+                                <p>The Federal Reserve maintains current interest rates while signaling potential changes in upcoming meetings...</p>
+                                <div class="news-meta">
+                                    <span class="news-source">Wall Street Journal</span>
+                                    <span class="news-time">6 hours ago</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Portfolio Section -->
+                <section class="portfolio-section">
+                    <h3 class="section-title">Portfolio Performance</h3>
+                    <div class="portfolio-summary">
+                        <div class="portfolio-value">
+                            <div class="portfolio-total">$125,434.67</div>
+                            <div class="portfolio-change positive">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>+$2,345.89 (+1.9%)</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Day's Gain</span>
+                                <span class="stat-value positive">+$1,234.56</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Total Gain</span>
+                                <span class="stat-value positive">+$15,434.67</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-holdings">
+                        <div class="holding-item">
+                            <div class="holding-symbol">AAPL</div>
+                            <div class="holding-shares">100 shares</div>
+                            <div class="holding-value">$17,543.00</div>
+                            <div class="holding-change positive">+2.1%</div>
+                        </div>
+                        <div class="holding-item">
+                            <div class="holding-symbol">MSFT</div>
+                            <div class="holding-shares">50 shares</div>
+                            <div class="holding-value">$20,644.50</div>
+                            <div class="holding-change negative">-0.8%</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>StockScope</h4>
+                    <p>Advanced stock research platform for informed investment decisions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Research</h4>
+                    <ul>
+                        <li><a href="#">Stock Analysis</a></li>
+                        <li><a href="#">Market Insights</a></li>
+                        <li><a href="#">Economic Calendar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="#">Portfolio Tracker</a></li>
+                        <li><a href="#">Stock Screener</a></li>
+                        <li><a href="#">Options Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">API Documentation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 StockScope. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
